@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Alam Terbah</title>
+    <link rel="stylesheet" href="./about.css">
+    <link rel="icon" href="./Assets/logo_terbah_icon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hero-section">
+        <header>
+            <nav class="navbar">
+                <div class="nav-left">
+                    <a href="./index.html" class="nav-item">BERANDA</a>
+                    <a href="./about.html" class="nav-item">TENTANG</a>
+                </div>
+                <div class="nav-center">
+                    <img src="./Assets/logo_terbah.png" class="logo" alt="Logo Wisata Terbah">
+                </div>
+                <div class="nav-right">
+                    <a href="index.html#body5" class="nav-item">LOKASI</a>
+                    <a href="#footer" class="nav-item">KONTAK</a>
+                </div>
+            </nav>
+        </header>
+        <section class="body1" id="tentang">
+            <div class="about-container">
+                <!-- Gambar di atas deskripsi -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <a href="#img1">
+                            <img src="./Assets/IMG_1008.jpg" alt="Wisata Terbah 1" />
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="#img2">
+                            <img src="./Assets/IMG_0920.jpg" alt="Wisata Terbah 2" />
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="#img3">
+                            <img src="./Assets/IMG_0982.jpg" alt="Wisata Terbah 3" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modal untuk melihat gambar yang lebih besar -->
+                <div class="modal" id="img1">
+                    <span class="close" onclick="closeModal('img1')">&times;</span>
+                    <img src="./Assets/IMG_1008.jpg" alt="Wisata Terbah 1" class="modal-content" />
+                </div>
+                <div class="modal" id="img2">
+                    <span class="close" onclick="closeModal('img2')">&times;</span>
+                    <img src="./Assets/IMG_0920.jpg" alt="Wisata Terbah 2" class="modal-content" />
+                </div>
+                <div class="modal" id="img3">
+                    <span class="close" onclick="closeModal('img3')">&times;</span>
+                    <img src="./Assets/IMG_0982.jpg" alt="Wisata Terbah 3" class="modal-content" />
+                </div>
+
+                <!-- Deskripsi -->
+                <div class="about-description">
+                    <h2>Wisata Alam Terbah</h2>
+                    <p>
+                        Desa Terbah adalah salah satu desa di Kecamatan Patuk, Gunung Kidul, Yogyakarta. Desa ini
+                        terletak di wilayah perbukitan kapur yang khas, dengan lanskap alam berupa bukit hijau, sawah
+                        tadah hujan, dan gua karst.
+                        Sebagian besar penduduknya hidup dari pertanian tradisional dan beberapa usaha kecil seperti
+                        kerajinan dan makanan lokal.
+                    </p>
+                    <p>
+                        Budaya di Desa Terbah sangat kaya, dengan tradisi Jawa yang masih terjaga seperti gotong royong
+                        dan acara adat. Desa ini juga mulai mengembangkan potensi wisata berbasis alam dan budaya,
+                        menjadikannya destinasi menarik untuk menikmati suasana pedesaan yang asri.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="./Assets/Logo_Kabupaten_GunungKidul.jpg" alt="Logo Terbah" class="logo-img">
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <h4>Hubungi Kami</h4>
+                <p>Detail Alamat dan Kontak Kami :</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 5HG5+JCH, Karang, Terbah, Kec. Patuk, Kabupaten Gunung
+                        Kidul, Daerah Istimewa Yogyakarta 55862 </p>
+                    <p><i class="fas fa-envelope"></i> wisataterbah@example.com</p>
+                    <p><i class="fas fa-phone"></i> 0123-456-7890</p>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <h4 class="teks">Hubungkan Dengan Kami</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/+62818276933" class="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="Whatsapp">
+                    </a>
+                    <a href="https://www.instagram.com/kalurahan_terbah?igsh=eGhhanJydDVtYnRo" class="social-icon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOV02TN2b8bGp4gg9h7oXUObNj5Uqwf9NWxg&s"
+                            alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/desaterbah/?locale=id_ID" class="social-icon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfI6KOy4SC36COdkZmrbfTfiztXOrvQIt5g&s"
+                            alt="Facebook">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Subscription Form -->
+            <div class="footer-subscription">
+                <h4>Saran dan Masukkan</h4>
+                <input type="email" id="subscription-email" name="email" placeholder="Masukkan saran anda"
+                    class="subscription-input" title="Masukkan saran anda" aria-label="Masukkan saran anda">
+                <button class="subscription-button">Submit</button>
+            </div>
+        </div>
+        <div class="footer-company-logos">
+            <h4>Support By :</h4>
+            <div class="company-logos">
+                <img src="./Assets/logo 1.png" alt="Company 1">
+                <img src="./Assets/logo 2.png" alt="Company 2">
+                <img src="./Assets/logo 3.png" alt="Company 3">
+                <img src="./Assets/logo 4.png" alt="Company 4">
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Wisata Alam Terbah. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="./index.js"></script>
+    <script src="./about.js"></script>
+</body>
+
+</html>

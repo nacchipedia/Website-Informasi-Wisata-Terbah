@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    background-image: url('./Assets/stones_background.png');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px; /* Adjust padding as needed */
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 10px 40px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar.scrolled {
+    background-color: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Item Styles */
+.nav-left, .nav-right, .nav-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .nav-item, .nav-right .nav-item, .nav-center .logo {
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-center .logo {
+    font-size: 1.5em;
+    color: #333333; /* Changed logo color to match text */
+}
+
+.navbar .nav-item {
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-item::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #4e3810; /* Changed underline color for visibility on white */
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar .nav-item:hover {
+    color: #4e3810; /* Adjusted hover color */
+    transform: scale(1.1);
+}
+
+.navbar .nav-item:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.navbar .nav-item:active {
+    transform: scale(0.95);
+    color: #ff6600; 
+}
+
+.body1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: transparent;
+    position: relative;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 20px; /* Jarak antar gambar */
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+.about-description {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.about-description h2 {
+    font-size: 2em;
+    color: #4e3810;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-description p {
+    margin-bottom: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff6600;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .about-description h2 {
+        font-size: 1.8em;
+    }
+}
+
+
+
+.footer {
+    background-color: #ffffff;
+    padding: 60px 20px; /* menambah padding untuk membuat footer lebih tinggi */
+    font-family: 'Poppins', sans-serif;
+    color: #5a4634;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* menambah jarak antar elemen untuk tampilan lebih rapi */
+    justify-content: space-between;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px; /* memberi jarak agar logo lebih seimbang */
+}
+
+.footer-logo .logo-img {
+    width: 200px; /* memperbesar logo sedikit */
+    bottom: 100px;
+}
+
+.footer-contact, .footer-social, .footer-subscription {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    margin-bottom: 20px; /* memberi jarak antar bagian untuk kesan lebih tinggi */
+}
+
+.footer-contact h4, .footer-social h4, .footer-subscription h4 {
+    color: #a65c00;
+    margin-bottom: 15px; /* memberi jarak tambahan di bawah judul */
+    font-size: 18px;
+}
+
+.contact-info p, .footer-subscription p {
+    margin: 8px 0; /* menambah jarak antar paragraf */
+    line-height: 1.6; /* menambah jarak antar baris */
+}
+
+.footer-social {
+    text-align: center; /* Agar semuanya terpusat */
+}
+
+.footer-social .teks {
+    color: #a65c00;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-social .social-icons {
+    display: flex; /* Menampilkan ikon sosial secara horizontal */
+    justify-content: center; /* Menyusun ikon secara horizontal di tengah */
+    gap: 10px; /* Menambahkan jarak antar ikon */
+}
+
+.footer-social .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.footer-social .social-icon:hover {
+    transform: scale(2.0);
+}
+
+.subscription-input {
+    width: 100%;
+    padding: 12px; /* memperbesar input field */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 16px; /* memperbesar teks dalam input */
+}
+
+.subscription-button {
+    background-color: #a65c00;
+    color: white;
+    padding: 12px 25px; /* memperbesar tombol */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.subscription-button:hover {
+    background-color: #814000;
+}
+
+.footer-subscription p {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 10px;
+}
+
+.footer-contact, .footer-social, .footer-company-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-contact h4, .footer-social h4, .footer-company-logos h4 {
+    color: #a65c00;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icon img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.footer-social .social-icon:hover {
+    transform: scale(1.5);
+}
+
+
+.footer-company-logos .company-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.company-logos img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.company-logos img:hover {
+    transform: scale(1.1);
+}
+
+.footer .copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 30px; /* menambah jarak antara bagian utama footer dan copyright */
+}

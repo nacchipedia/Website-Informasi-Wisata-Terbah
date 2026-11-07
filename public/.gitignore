@@ -1,0 +1,12 @@
+# Dependensi
+node_modules/
+vendor/
+
+# Konfigurasi lingkungan & rahasia
+.env
+*.local
+
+# Log & file sistem
+npm-debug.log*
+.DS_Store
+Thumbs.db
